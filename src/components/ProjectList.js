@@ -2,15 +2,18 @@ import React from "react";
 import ProjectItem from "./ProjectItem";
 
 function ProjectList({ projects }) {
+  console.log(projects);
+
   const projectItems = projects.map((project) => (
     <ProjectItem
       key={project.id}
       name={project.name}
-      about={project.about} // Updated to match `about` key in data
-      technologies={project.technologies}
+      about={project.about}
+      technologies={project.technologies} // Pass the technologies prop
     />
-  ));
 
+    
+  ));
   return (
     <div id="projects">
       <h2>My Projects</h2>
